@@ -1,0 +1,28 @@
+.footer{ 
+    position: fixed;
+    left:0;
+    bottom:0;
+    background: #fff;
+    width:100%;
+    .footer-menu-list{
+        display: flex;
+        justify-content: space-between;
+        margin:0;
+        li{
+            flex:1;
+            a{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                color:#666;
+                padding:0.1rem 0.05rem;
+                &.active{
+                    color:#00A862
+                }
+                 
+            }
+        }  
+    }
+}
+

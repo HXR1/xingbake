@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>React App</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_961400_kw4gwx72xue.css">
+    <script>
+      function fn(){
+        let winW = document.documentElement.clientWidth;
+        if(winW>=750){
+          document.documentElement.style.fontSize = '100px';
+          return;
+        }
+        document.documentElement.style.fontSize=winW/750*100+'px';
+      }
+      fn();
+      document.addEventListener('resize',fn,false)
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
