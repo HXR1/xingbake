@@ -1,0 +1,143 @@
+@keyframes start{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes end{
+    0%{
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+.go{
+    animation:start .1s linear both;
+}
+.close{
+    animation:end .1s linear both;
+}
+.shop-filter{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: #fff;
+    z-index: 10000;
+    .filter-header{
+        height: 60px;
+        margin: 0 16px;
+        position: relative;
+        .header-icon{
+            position: absolute;
+            right:0;
+            font-size: 0.6rem;
+            top:50%;
+            transform: translateY(-50%);
+            padding:3px;
+        }
+    }
+    .filter-box{
+        padding:0 16px 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        h2{
+            font-weight: bold;
+            font-size: 0.5rem;
+        }
+        p{
+            display: inline-block;
+            padding-top: 12px;
+            width:100%;
+            font-size: 0.35rem;
+            margin:0;
+            button{
+                border:none;
+                background: none;
+                color: #009758;
+                float:right;
+            }
+        }
+    }
+    .filter-main{
+        ul{
+            li{
+                position: relative;
+                font-size: 0.4rem;
+                padding:16px 40px 16px 16px;
+                color: rgba(0, 0, 0, 0.56);
+                b{
+                    display: inline-block;
+                    width: 24px;
+                    height:24px;
+                    margin-right: 6px;
+                    background: url("../../assets//icon-star.svg") no-repeat center/contain;
+                    vertical-align: middle;
+                    position: relative;
+                    top:-3px;
+                }
+                // &.selectIndex{
+                //     background: rgba(0, 0, 0, .3);
+                // }
+                &.active{
+                    color: rgba(0, 0, 0, 0.87);
+                    &::after{
+                        content: '';
+                        height: 24px;
+                        width:24px;
+                        position: absolute;
+                        right: 0.4rem;
+                        top:18px;
+                        background: url("../../assets/icon-checked-green.svg") no-repeat center/contain;
+                    }
+                }
+                &:nth-child(2){
+                    b{
+                        background-image: url("../../assets/icon-black-eagle.svg")
+                    } 
+                }
+                &:nth-child(3){
+                    b{
+                        background-image: url("../../assets/icon-coffee-meet-icecream.svg")
+                    } 
+                }
+                &:nth-child(4){
+                    b{
+                        background-image: url("../../assets/icon-nitro-coldbrew.svg")
+                    } 
+                }
+                &:nth-child(5){
+                    b{
+                        background-image: url("../../assets/icon-pour-over.svg")
+                    } 
+                }
+                &:nth-child(6){
+                    b{
+                        background-image: url("../../assets/delivery.png")
+                    } 
+                }
+            }
+        }
+    }
+   .sure{
+       position: absolute;
+       border:none;
+       right: 16px;
+    bottom: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.38);
+    margin-bottom: 4px;
+    background: #00A862;
+    border-color: #00A862;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 0.36rem;
+    padding: 12px 24px;
+    border-radius: 48px;
+    box-sizing: border-box;
+   }
+}

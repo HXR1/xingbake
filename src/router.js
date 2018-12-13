@@ -8,6 +8,7 @@ import Shop from './page/shop';
 import Account from './page/account';
 import Menu from './page/menu';
 import More from './page/more';
+import ShopFilter from './page/shop/shopFilter';
 const {ConnectedRouter} = routerRedux;
 function RouterConfig({ history }) {
   return (
@@ -15,7 +16,8 @@ function RouterConfig({ history }) {
      <Wrap>
     <Switch>
     <Route path="/home" component={Home}/>
-    <Route path="/shop" component={Shop}/>
+    <Route path="/shop" exact component={Shop}/>
+    <Route path="/shop/shopfilter" component={ShopFilter}/>
     <Route path="/account" component={Account}/>
     <Route path="/menu" component={Menu}/>
     <Route path="/more" component={More}/>

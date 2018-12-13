@@ -1,0 +1,358 @@
+.shop{
+    width:100%;
+    // height:100%;
+    overflow: hidden;
+    .navBar{
+        box-sizing: border-box;
+        position: relative;
+    // position: fixed;
+    // top: 0px;
+    // left: 0px;
+    background: #FFF;
+    padding: 16px 16px 8px;
+    width: 100%;
+    z-index: 997;
+    .locationFilterSwitch{
+        margin-right:48px;
+        position: relative;
+        .locationFilter{
+            &>button{
+                -webkit-appearance: button;
+                cursor: pointer;
+                padding: 0;
+            background: none;
+            border: none;
+            white-space: nowrap;
+            color:#333;
+            font-size: 0.3rem;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    margin-right: 6px;
+                    width:14px;
+                    height:18px;
+                    background: url("../../assets/icon-locator-green.svg") no-repeat center/contain;
+                    position: relative;
+                    top:4px;
+                }
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    width:10px;
+                    height:8px;
+                    background: url("../../assets/icon-locator-arrow.svg") no-repeat center/contain;
+                    margin-left:6px;
+                    position: relative;
+                    top:-1;
+                }
+            }
+            .locationFilterPanel{
+                position: fixed;
+                background: #fff;
+                left:0;
+                top:8%;
+                z-index: 9999;
+                width:100%;
+                padding: 16px 19px 21px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.38);
+    background: #FFF;
+    line-height: normal;
+    max-height:calc(100vh - 58px);
+    overflow-x:hidden;
+    overflow-y:scroll;
+                .locationCurrent{
+                    margin-bottom: 27px;
+                    span{
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, 0.56);
+                    }
+                    button{
+                        display: inline-block;
+    margin-top: 9px;
+    padding: 3px 10px;
+    background: #FFF;
+    border: 1px solid #00A862;
+    border-radius: 2px;
+    line-height: normal;
+    font-size: 14px;
+    color: #00A862;
+                    }
+                }
+                .locationFilterTab{
+                    margin-bottom: 16px;
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.56);
+                    span{
+                        margin-right:9px;
+                    }
+                    button{
+                        margin-left: 4px;
+    margin-right: 7px;
+    padding: 0;
+    background: none;
+    border: none;
+    line-height: normal;
+    &.locationFilterTab-active{
+        color: #00A862
+    }
+                    }
+                }
+                .locationFilterLocations{
+                    margin-bottom:20px;
+                    line-height: 36px;
+                    button{
+                        display: inline-block;
+padding: 3px 10px;
+background: none;
+border: none;
+border-radius: 2px;
+font-size: 14px;
+line-height: normal;
+letter-spacing: 0.4px;
+&.locationFilter-active{
+    background: #00A862;
+color: #FFF
+}
+}
+                    .locationFilterGroup{
+                        display: flex;
+                        align-items: stretch;
+                        .locationFilterGroupName{
+                            margin-top: 1px;
+                            margin-right: 13px;
+                            font-size: 13px;
+                        }
+                        .locationFilterGroupContent{
+                            
+                    }
+                   
+                    }
+                }
+                .location-footer{
+                    margin-top: 5px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.56);
+    margin: 0 0 24px;
+    overflow: hidden;
+    .primary{
+        float:right;
+font-size: 0.35rem;
+box-sizing: border-box;
+outline: none;
+padding: 5px 15px;
+background: #f7f7f7;
+border-color: #f7f7f7;
+color: rgba(0, 0, 0, 0.38);
+cursor: not-allowed;
+border-radius: 48px;
+border:none;
+&.active{
+    background: #00A862;
+    border-color: #00A862;
+    color:#fff;
+    cursor: pointer;
+}
+    }
+                }
+               
+            }
+        }
+        
+        input{
+            font-weight: normal;
+            background: none;
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            transition-property: border;
+        transition-duration: 0.2s;
+        padding: 4px 0;
+        padding-right: 24px;
+        width:100%;
+        font-size: 0.4rem;
+            &:focus{
+                border-color: #00A862;
+            }
+        }
+        i{
+            width: 22px;
+            height:22px;
+            position: absolute;
+            right:0;
+            bottom: 6px;
+            background: url('../../assets//icon-search.svg') no-repeat center/contain;
+        }
+
+    }
+    a{
+        color: #00A862;
+        font-size: 0.4rem;
+        cursor: pointer;
+        position: absolute;
+        right:0.3rem;
+        bottom:0.3rem;
+        -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    }
+    }
+    .map{
+        position: relative;
+        overflow: hidden;
+        height: 255px;
+    width: 320px;
+    .mapSrc{
+        position: absolute;
+        left:-9rem;
+        top:-9rem;
+    }
+    a{
+        position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 160;
+    height: 20px;
+        img{
+            width: 73px!important;
+        height: 20px!important;
+        border: 0;
+        vertical-align: baseline!important;
+        }
+    }
+    .features{
+        position: absolute;
+        right:10px;
+        top:0;
+        z-index: 10000;
+        width:90%;
+        span{
+            display: inline-block;
+            padding:6px 10px 6px 10px;
+            border-radius: 20px;
+            margin-top: 6px;
+            background: #fff;
+            color:#00A862;
+            margin-right:10px;
+            i{
+                font-style: normal;
+                padding: 8px 8px 8px 12px;
+            }
+        }
+    }
+    .map-geolocation{
+        position: absolute;
+    z-index: 100;
+    right: 14px;
+    bottom: 135px;
+    .map-geo{
+        background: #fff url("../../assets/loc_gray.png") no-repeat center center;
+        width:35px;
+        height:35px;
+        border:1px solid #ccc;
+        border-radius:3px;
+    }
+    }
+    .map-zoomcontrol{
+        position: absolute;
+        right: 14px;
+        z-index: 100;
+        width: 35px;
+        bottom:30px;
+        height:93px;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 10px 0 #ccc;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 0.9rem;
+        .add{
+            flex:1;
+            cursor: pointer;
+        }
+        .minus{
+            flex:1;
+            cursor: pointer;
+        }
+        .line{
+            height:0;
+            border-top:1px solid #ddd;
+            width:0.4rem;
+            margin:auto;
+        }
+    }
+    }
+    .shopListBox{
+        position: relative;
+        height:4rem;
+    .shopList{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width:100%; 
+        height:100%;
+        margin-top:3px;
+        .notFound{
+            font-size: 0.4rem;
+            border:none;
+            text-align: center;
+        }
+        li{
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease;
+    width: 100%;
+    padding: 16px 60px;
+    .number{
+        position: absolute;
+        width:24px;
+        height:35px;
+        text-align: center;
+        font-size: 0.4rem;
+        color:#fff;
+        background: url("../../assets/icon-pin-solid-grey.svg") no-repeat center/contain;
+        left:0.5rem;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    &.selected{
+        background: rgba(0, 0, 0, 0.12);
+        .number{
+            background-image: url("../../assets/icon-pin-solid-green.svg");
+        }
+    }
+    .title{
+        color:#000;
+        font-weight: bolder;
+        padding-right:0.8rem;
+        line-height: 0.6rem;
+        background: url("../../assets/delivery.png") no-repeat right center;
+        background-size: 28px 20px;
+    }
+    .text{
+        color: rgba(0, 0, 0, 0.56);
+    font-weight: normal;
+    margin-top: 4px;
+    margin-bottom:0;
+    line-height: 0.6rem;
+    }
+    .distance{
+        line-height: 0.6rem;
+        font-size: 0.35rem;
+        color:#666;
+    }
+        }
+        .shopInfo{
+            background: url("../../assets/icon-info-green.svg") no-repeat center/contain;
+            position: absolute;
+            right:0.5rem;
+            top:50%;
+            transform: translateY(-50%);
+            width:22px;
+            height:22px;
+        }
+    }
+}
+}
